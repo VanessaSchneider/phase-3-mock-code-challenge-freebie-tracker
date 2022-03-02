@@ -12,10 +12,17 @@ Dev.create(name: "Gazorpazop")
 
 puts "Creating freebies..."
 
-# ***************************************************************
-# * TODO: create freebies! Remember, a freebie belongs to a dev *
-# * and a freebie belongs to a company.                         *
-# ***************************************************************
-# Create freebies Here
+4.times do
+company_id = Company.ids.sample
+dev_id = Dev.ids.sample
+value = rand(20..100)
+item_name = rand(1..12)
+
+
+
+Freebie.create(company_id: company_id, dev_id: dev_id, value: value, item_name: item_name)
+
+end
+
 
 puts "Seeding done!"
